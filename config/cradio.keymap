@@ -19,7 +19,7 @@
 
 //#include "combos.dtsi"  // requires layer aliases
 #include "mouse.dtsi"
-#include "extra_keys.h"
+// #include "extra_keys.h"
 
 #define XXX &none
 #define ___ &trans
@@ -219,7 +219,7 @@ ZMK_BEHAVIOR(win_sleep, macro,
 
 /* Keymap */
 
-ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
+// ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 
 ZMK_LAYER(base,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ 
