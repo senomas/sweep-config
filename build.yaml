@@ -13,6 +13,7 @@
 #
 ---
 include:
-  - board: planck_rev6
-  - board: corneish_zen_v2_left
-  - board: corneish_zen_v2_right
+  - board: nrfmicro_13
+    shield: cradio_left
+  - board: nrfmicro_13
+    shield: cradio_right
