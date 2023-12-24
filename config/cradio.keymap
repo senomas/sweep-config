@@ -47,24 +47,28 @@
         };
 	      td_0: td_semi {
             compatible = "zmk,behavior-tap-dance";
+            label = "TD SEMI";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
             bindings = <&kp SEMI>, <&kp COLON>, <&kp TILDE>;
         };
 	      td_1: td_comma {
             compatible = "zmk,behavior-tap-dance";
+            label = "TD COMMA";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
             bindings = <&kp COMMA >, <&kp LT>, <&kp PIPE>;
         };
 	      td_2: td_dot {
             compatible = "zmk,behavior-tap-dance";
+            label = "TD DOT";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
             bindings = <&kp DOT>, <&kp GT>,<&kp DQT>;
         };
 	      td_3: td_qmark {
             compatible = "zmk,behavior-tap-dance";
+            label = "TD QMARK";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
             bindings = <&kp QMARK>, <&kp SLASH>, <&kp BSLH>;
