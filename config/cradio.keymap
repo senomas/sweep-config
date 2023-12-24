@@ -40,7 +40,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <300>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -49,28 +49,28 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD SEMI";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <300>;
             bindings = <&kp SEMI>, <&kp COLON>, <&kp TILDE>;
         };
 	      td_1: td_comma {
             compatible = "zmk,behavior-tap-dance";
             label = "TD COMMA";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <300>;
             bindings = <&kp COMMA >, <&kp LT>, <&kp PIPE>;
         };
 	      td_2: td_dot {
             compatible = "zmk,behavior-tap-dance";
             label = "TD DOT";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <300>;
             bindings = <&kp DOT>, <&kp GT>,<&kp DQT>;
         };
 	      td_3: td_qmark {
             compatible = "zmk,behavior-tap-dance";
             label = "TD QMARK";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <300>;
             bindings = <&kp QMARK>, <&kp SLASH>, <&kp BSLH>;
         };
 
@@ -78,7 +78,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYERTAP";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <300>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&to>, <&kp>;
