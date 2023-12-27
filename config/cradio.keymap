@@ -46,15 +46,15 @@
 	    key-positions = <27 28>;
       bindings = <&kp RETURN>;
      };
+	combo_rgui {
+      timeout-ms = <50>;
+	    key-positions = <28 29>;
+      bindings = <&kp RGUI>;
+     };
      combo_slash {
       timeout-ms = <50>;
 	    key-positions = <12 13>;
       bindings = <&kp FSLH>;
-     };
-     combo_spc_h {
-      timeout-ms = <50>;
-	    key-positions = <13 23>;
-      bindings = <&kp SPACE &kp H>;
      };
      combo_alt_h {
       timeout-ms = <50>;
@@ -70,16 +70,6 @@
       timeout-ms = <50>;
 	    key-positions = <16 17>;
       bindings = <&kp COLON>;
-     };
-     combo_w {
-      timeout-ms = <50>;
-	    key-positions = <26 27>;
-      bindings = <&kp COLON &kp W>;
-     };
-     combo_wq {
-      timeout-ms = <50>;
-	    key-positions = <26 27 28>;
-      bindings = <&kp COLON &kp W &kp Q>;
      };
   };
 
