@@ -106,7 +106,7 @@
         bindings = <
         &kp Q &kp W &kp E &kp R &kp T 			&kp Y &kp U  &kp I    &kp O  &kp P 
         &kp A &kp S &kp D &kp F &kp G 			&kp H &kp J &kp K &kp L &kp SEMI
-        &kp Z &kp X &kp C &kp V &kp B				&kp N &kp M  &kp COMMA &kp DOT &kp FSLH  
+        &kp Z &kp X &kp C &kp V &kp B			&kp N &kp M  &kp COMMA &kp DOT &kp FSLH  
                       &mo 2 &sk LSHFT       &kp SPACE &mo 1
         >;
 		  };
@@ -115,8 +115,8 @@
     sym_layer {
 		  bindings = <
       &kp GRAVE &kp LPAR &kp LBRC &kp LBKT  &kp LT		        &kp GT &kp RBKT &kp RBRC &kp RPAR  &kp TILDE 
-      &kp PIPE &kp SEMI &kp EQUAL &kp MINUS &kp EXCLAMATION 	&kp HASH &kp RGUI &kp RCTRL &kp RALT &kp RSHFT
-      &kp AT_SIGN &kp AMPS &kp PLUS &kp PERCENT &kp QUESTION	&kp FSLH &kp DOLLAR  &kp STAR &kp BSLH &kp CARET
+      &kp PIPE &kp SEMI &kp EQUAL &kp MINUS &kp EXCLAMATION 	&kp HASH &kp RGUI &kp RCTRL &kp RALT &sk RSHFT
+      &kp AT_SIGN &kp AMPS &kp PLUS &kp PERCENT &kp SQT	&kp DQT &kp DOLLAR  &kp STAR &kp BSLH &kp CARET
                       &mo 3 &sk LSHIFT      &kp SPACE &trans
       >;
 		};	
