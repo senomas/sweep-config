@@ -24,7 +24,7 @@
      combo_lalt {
       timeout-ms = <50>;
       key-positions = <0 1>;
-      bindings = <&kp LCTRL>;
+      bindings = <&kp LALT>;
      };
     combo_lctrl {
       timeout-ms = <50>;
@@ -64,7 +64,7 @@
      combo_ralt {
       timeout-ms = <50>;
       key-positions = <8 9>;
-      bindings = <&kp RCTRL>;
+      bindings = <&kp RALT>;
      };
      combo_rctrl {
       timeout-ms = <50>;
