@@ -24,17 +24,17 @@
      combo_lalt {
       timeout-ms = <50>;
       key-positions = <0 1>;
-      bindings = <&kp LALT>;
+      bindings = <&sk LALT>;
      };
     combo_lctrl {
       timeout-ms = <50>;
 	    key-positions = <10 11>;
-      bindings = <&kp LCTRL>;
+      bindings = <&sk LCTRL>;
      };
      combo_lgui {
       timeout-ms = <50>;
 	    key-positions = <20 21>;
-      bindings = <&kp LGUI>;
+      bindings = <&sk LGUI>;
      };
      combo_setting {
        timeout-ms = <50>;
@@ -64,17 +64,17 @@
      combo_ralt {
       timeout-ms = <50>;
       key-positions = <8 9>;
-      bindings = <&kp RALT>;
+      bindings = <&sk RALT>;
      };
      combo_rctrl {
       timeout-ms = <50>;
       key-positions = <18 19>;
-      bindings = <&kp RCTRL>;
+      bindings = <&sk RCTRL>;
      };
      combo_rgui {
       timeout-ms = <50>;
 	    key-positions = <28 29>;
-      bindings = <&kp RGUI>;
+      bindings = <&sk RGUI>;
      };
      combo_slash {
       timeout-ms = <50>;
@@ -125,7 +125,7 @@
     sym_layer {
 		  bindings = <
       &kp GRAVE &kp LPAR &kp LBRC &kp LBKT  &kp LT		        &kp GT &kp RBKT &kp RBRC &kp RPAR  &kp TILDE 
-      &kp PIPE &kp SEMI &kp EQUAL &kp MINUS &kp EXCLAMATION 	&kp HASH &kp RGUI &kp RCTRL &kp RALT &sk RSHFT
+      &kp PIPE &kp SEMI &kp EQUAL &kp MINUS &kp EXCLAMATION 	&kp HASH &kp RGUI &sk RCTRL &sk RALT &sk RSHFT
       &kp AT_SIGN &kp AMPS &kp PLUS &kp PERCENT &kp SQT	&kp DQT &kp DOLLAR  &kp STAR &kp BSLH &kp CARET
                       &mo 3 &sk LSHIFT      &kp SPACE &trans
       >;
