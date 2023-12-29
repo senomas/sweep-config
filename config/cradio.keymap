@@ -21,6 +21,11 @@
 	    key-positions = <11 12>;
       bindings = <&kp ESC>;
      };
+     combo_lalt {
+      timeout-ms = <50>;
+      key-positions = <0 1>;
+      bindings = <&kp LCTRL>;
+     };
     combo_lctrl {
       timeout-ms = <50>;
 	    key-positions = <10 11>;
@@ -56,9 +61,14 @@
 	    key-positions = <27 28>;
       bindings = <&kp RETURN>;
      };
+     combo_ralt {
+      timeout-ms = <50>;
+      key-positions = <8 9>;
+      bindings = <&kp RCTRL>;
+     };
      combo_rctrl {
       timeout-ms = <50>;
-	    key-positions = <18 19>;
+      key-positions = <18 19>;
       bindings = <&kp RCTRL>;
      };
      combo_rgui {
