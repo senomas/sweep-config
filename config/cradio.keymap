@@ -142,8 +142,8 @@
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
             &kp A        &kp S     &kp  D     &kp  F     &kp G          &kp H      &kp J      &kp  K    &kp L      &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
+        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │   / ?    │
+            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                            &lt LEF TAB  &kp LSHIFT    &kp SPACE  &lt RIG TAB
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -156,11 +156,11 @@
         //│ 1        │  2       │  3       │  4       │  5       │   │ 6        │ 7        │ 8        │ 9        │   0      │
             &kp N1    &kp N2     &kp N3     &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9      &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │ CapsLock │ PrintSc  │  INSERT  │          |   |          │ LEFT     │ DOWN     │ UP       │ RIGHT    │
-            &kp DEL    &kp CAPS	  &kp PSCRN   &kp INS   &kp LGUI      &kp RGUI     &kp LARW  &kp DARW  &kp  UARW   &kp RARW 
+        //│ DELETE   │ CapsLock │ PrintSc  │  INSERT  │          |   | LEFT     │ DOWN     │ UP       │ RIGHT    │          |
+            &kp DEL    &kp CAPS	  &kp PSCRN   &kp INS   &kp LGUI       &kp LARW  &kp DARW  &kp  UARW   &kp RARW     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │ HOME     │ PAGE DN  │ PAGE UP  │ END      │
-            &trans    &trans     &trans     &trans      &trans           &trans     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END 
+        //│          │          │          │          │          │   │          │ HOME     │ PAGE DN  │ PAGE UP  │ ENTER    │
+            &trans    &trans     &trans     &trans      &trans           &trans   &kp HOME   &kp PG_DN  &kp PG_UP  &kp ENTER 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
