@@ -160,7 +160,7 @@
             &kp DEL    &kp CAPS	  &kp PSCRN   &kp INS   &kp LGUI       &kp LARW  &kp DARW  &kp  UARW   &kp RARW     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │ HOME     │ PAGE DN  │ PAGE UP  │ ENTER    │
-            &trans    &trans     &trans     &trans      &trans           &trans   &kp HOME   &kp PG_DN  &kp PG_UP  &kp ENTER 
+            &kp ENTER    &trans     &trans     &trans      &trans           &trans   &kp HOME   &kp PG_DN  &kp PG_UP  &kp ENTER 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
