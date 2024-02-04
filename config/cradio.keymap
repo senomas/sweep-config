@@ -208,7 +208,7 @@
           &kp LEFT   &kp DOWN  &kp UP &kp RIGHT &kp ENTER  	                    &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_UP   &mmv MOVE_RIGHT  &mkp LCLK
           &mkp LCLK  &mkp MCLK  &mkp RCLK &kp K_VOL_UP  &kp K_VOL_DN              &mwh SCROLL_LEFT   &mwh SCROLL_DOWN &mwh SCROLL_UP  &mwh SCROLL_RIGHT &mkp RCLK
          //╰──────────┴──────────┴──────────┼───────────┼────────────┤              ├────────────┼────────────┼──────────┴───────────┴──────────╯
-                                               &to LEF     &trans                        &trans     &to RIG
+                                               &to 0     &trans                        &trans     &to 0
         //                                  ╰───────────┴──────────╯                 ╰──────────┴────────────╯
         >;
 	};	
