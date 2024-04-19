@@ -201,7 +201,7 @@
         };
 
    
-      MOUSE layer
+      // MOUSE layer
       mouse_layer {
 	    bindings = <
           &kp PG_UP  &kp HOME  &kp UP &kp END &kp CAPS 		                        &kp ESC            &mkp LCLK        &mkp MCLK       &mkp RCLK         &mkp MCLK 
