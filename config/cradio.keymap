@@ -161,9 +161,9 @@
             &kp DEL    &kp CAPS	  &kp PSCRN   &kp INS   &kp LGUI       &kp LARW  &kp DARW  &kp  UARW   &kp RARW     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │ HOME     │ PAGE DN  │ PAGE UP  │ ENTER    │
-            &kp ENTER    &trans     &trans     &trans      &trans           &trans   &kp HOME   &kp PG_DN  &kp PG_UP  &kp ENTER 
+            &kp ENTER    &trans     &trans     &trans      &trans       &trans   &kp HOME   &kp PG_DN  &kp PG_UP  &kp ENTER 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &kp ESC     &trans
+                                             &trans     &kp ESC         &kp ESC     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -180,7 +180,7 @@
         //│  '       │  ]       │  }       │  )       │          │   │    \     │  _       │  +       │  │       │   ?      │
             &kp SQT     &kp RBKT   &kp RBRC   &kp RPAR   &trans         &kp BSLH   &kp UNDER  &kp PLUS   &kp PIPE  &kp QMARK
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC         &trans     &trans
+                                             &trans     &kp ESC         &kp ESC     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
