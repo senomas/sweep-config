@@ -18,6 +18,16 @@
 #define TRI 3
 #define MOUSE 4
 
+&mt {
+    flavor = "tap-preferred";
+    tapping_term_ms = <200>;
+};
+
+&mmv {
+   time-to-max-speed-ms = <680>;
+   acceleration-exponent=<2>;
+};
+
 /* layer and key shortcuts */
 
 / {
@@ -121,7 +131,16 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
-    };
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+  };
 
    conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -138,7 +157,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp Q      WHRML(W ,   E  ,       R  )       &kp T          &kp Y     WHRMR( U,   I ,   O )  &kp P
+            &kp Q       &kp W      &kp E       &kp R     &kp T          &kp Y       &kp U     &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
             &kp A        &kp S     &kp  D     &kp  F     &kp G          &kp H      &kp J      &kp  K    &kp L      &kp BSPC
@@ -146,7 +165,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │   / ?    │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &lt LEF TAB  &kp LSHIFT    &kp SPACE  &lt RIG TAB
+                                         &ht ESC SPACE  &sk LSHIFT    &sk RCTRL    &to 1 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -157,13 +176,13 @@
         //│ 1        │  2       │  3       │  4       │  5       │   │ 6        │ 7        │ 8        │ 9        │   0      │
             &kp N1    &kp N2     &kp N3     &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9      &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │ CapsLock │ PrintSc  │  INSERT  │          |   | LEFT     │ DOWN     │ UP       │ RIGHT    │          |
-            &kp DEL    &kp CAPS	  &kp PSCRN   &kp INS   &kp LGUI       &kp LARW  &kp DARW  &kp  UARW   &kp RARW     &trans
+        //│ DELETE   │ CapsLock │ PrintSc  │  INSERT  │          |   | LEFT     │ DOWN     │ UP       │ RIGHT    │  ENTER   |
+            &kp DEL    &kp CAPS	  &kp PSCRN   &kp INS   &kp LGUI       &kp LARW  &kp DARW  &kp  UARW   &kp RARW    &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │ HOME     │ PAGE DN  │ PAGE UP  │ ENTER    │
-            &kp ENTER    &trans     &trans     &trans      &trans       &trans   &kp HOME   &kp PG_DN  &kp PG_UP  &kp ENTER 
+        //│          │          │          │          │          │   │          │ HOME     │ PAGE DN  │ PAGE UP  │   END    │
+            &kp ENTER  &kp LALT   &kp LGUI   &kp LCTRL   &to 3          &to 4    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC         &kp ESC     &trans
+                                              &to 0     &sk LSHIFT      &sk RALT  &to 2
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -180,7 +199,7 @@
         //│  '       │  ]       │  }       │  )       │          │   │    \     │  _       │  +       │  │       │   ?      │
             &kp SQT     &kp RBKT   &kp RBRC   &kp RPAR   &trans         &kp BSLH   &kp UNDER  &kp PLUS   &kp PIPE  &kp QMARK
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC         &kp ESC     &trans
+                                             &to 0       &sk LGUI       &to 4     &to 3
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -196,7 +215,7 @@
         //├──────────┼──────────┼──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┼───────────┼──────────┤
             &kp F9     &kp F10    &kp F11    &kp F12      &bootloader     &bootloader  &trans      &kp C_BRI_DEC  &kp C_VOL_DN &kp C_PREV
         //╰──────────┴──────────┴──────────┼───────────┼────────────┤   ├────────────┼────────────┼──────────┴───────────┴──────────╯
-                                                &trans     &trans         &trans     &trans
+                                                &to 0     &trans         &trans     &trans
         //                                  ╰───────────┴──────────╯   ╰──────────┴────────────╯
             >;
         };
