@@ -60,18 +60,18 @@
         default_layer {
             bindings = <
             &kp Q       &kp W      &kp E       &kp R     &kp T          &kp Y       &ht CAPS U   &kp I           &kp O          &kp P
-            &kp A       &kp S      &kp D       &kp F     &kp G          &ht ESC H   &kp J        &kp K           &kp L          &ht ENTER BSPC
-            &kp Z       &kp X      &kp C       &kp V     &kp B          &kp N       &kp M        &ht SEMI COMMA  &ht COLON DOT  &ht BSLH FSLH
+            &kp A       &kp S      &kp D       &kp F     &kp G          &kp H       &kp J        &kp K           &kp L          &ht ENTER BSPC
+            &kp Z       &kp X      &kp C       &kp V     &kp B          &ht ESC N   &kp M        &ht SEMI COMMA  &ht COLON DOT  &ht BSLH FSLH
                                          &ht LALT SPACE  &sk LSHIFT    &sk RCTRL    &to 1 
             >;
         };
 
         right_layer {
             bindings = <
-            &kp N1     &kp N2     &kp N3     &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9      &kp N0
-            &kp DEL    &kp CAPS	  &kp PSCRN   &kp INS   &kp LGUI       &kp LARW  &kp DARW  &kp  UARW   &kp RARW    &trans
+            &kp N1     &kp N2     &kp N3      &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9      &kp N0
+            &kp DEL    &trans     &kp PSCRN   &kp INS   &trans       &kp LARW  &kp DARW  &kp  UARW   &kp RARW    &trans
             &kp LALT   &kp LGUI   &kp LCTRL   &kp TAB   &to 3          &to 4    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END
-                                              &trans     &sk LSHIFT      &to 0      &to 2
+                                              &kp TAB   &sk LSHIFT      &to 0      &to 2
             >;
         };
 
