@@ -55,13 +55,13 @@
         td_ctrl: tap_dance_ctrl {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <500>;
             bindings = <&sk LCTRL>, <&kp TAB>;
         };
         td_esc: tap_dance_esc {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <500>;
             bindings = <&sk LSHIFT>, <&kp ESC>;
         };
   };
