@@ -52,17 +52,17 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        td_s: tap_dance_space {
+        td_ctrl: tap_dance_ctrl {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&ht LALT SPACE>, <&kp TAB>;
+            tapping-term-ms = <400>;
+            bindings = <&sk LCTRL>, <&kp TAB>;
         };
         td_esc: tap_dance_esc {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&kp N>, <&kp ESC>;
+            tapping-term-ms = <300>;
+            bindings = <&sk LSHIFT>, <&kp ESC>;
         };
   };
 
@@ -73,16 +73,16 @@
             bindings = <
             &kp Q       &kp W      &kp E       &kp R     &kp T          &kp Y       &ht CAPS U   &ht MINUS I     &ht EQUAL O    &ht ENTER P
             &kp A       &kp S      &kp D       &kp F     &kp G          &kp H       &kp J        &kp K           &kp L          &kp BSPC
-            &kp Z       &kp X      &kp C       &kp V     &kp B          &td_esc     &ht UNDER M  &ht SEMI COMMA  &ht COLON DOT  &ht BSLH FSLH
-                                               &td_s     &sk LCTRL      &sk LSHIFT  &to 1 
+            &kp Z       &kp X      &kp C       &kp V     &kp B          &kp N       &ht UNDER M  &ht SEMI COMMA  &ht COLON DOT  &ht BSLH FSLH
+                                          &ht LALT SPACE &td_ctrl       &td_esc     &to 1 
             >;
         };
 
         right_layer {  // 1
             bindings = <
             &kp N1     &kp N2     &kp N3      &kp N4    &kp N5           &kp N6    &kp N7     &kp N8     &kp N9      &ht ENTER N0
-            &kp DEL    &trans     &kp PSCRN   &kp INS   &trans           &kp LARW  &kp DARW   &kp  UARW   &kp RARW    &trans
-            &kp LALT   &kp LGUI   &kp LCTRL   &kp TAB   &to 3            &trans    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END
+            &kp DEL    &trans     &kp PSCRN   &kp INS   &trans           &kp LARW  &kp DARW   &kp UARW   &kp RARW    &trans
+            &kp LALT   &kp LGUI   &kp LCTRL   &kp TAB   &to 3            &to 4     &kp HOME   &kp PG_DN  &kp PG_UP   &kp END
                                               &trans    &trans           &to 0     &to 2
             >;
         };
