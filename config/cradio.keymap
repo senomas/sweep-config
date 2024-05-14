@@ -58,11 +58,11 @@
             tapping-term-ms = <200>;
             bindings = <&ht LALT SPACE>, <&kp TAB>;
         };
-        td_esc: tap_dance_lctrl {
+        td_esc: tap_dance_esc {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N>, <&kp ESC>;
+            bindings = <&kp N>, <&to 0 &kp ESC>;
         };
   };
 
