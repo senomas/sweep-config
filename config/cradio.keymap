@@ -58,6 +58,12 @@
             tapping-term-ms = <200>;
             bindings = <&ht LALT SPACE>, <&kp TAB>;
         };
+        td_esc: tap_dance_lctrl {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sk RCTRL>, <&to 0>;
+        };
   };
 
   keymap {
@@ -67,17 +73,17 @@
             bindings = <
             &kp Q       &kp W      &kp E       &kp R     &kp T          &kp Y       &ht CAPS U   &ht MINUS I     &ht EQUAL O    &ht ENTER P
             &kp A       &kp S      &kp D       &kp F     &kp G          &kp H       &kp J        &kp K           &kp L          &kp BSPC
-            &kp Z       &kp X      &kp C       &kp V     &kp B          &ht ESC N   &ht UNDER M  &ht SEMI COMMA  &ht COLON DOT  &ht BSLH FSLH
-                                               &td_s     &sk LSHIFT     &sk RCTRL   &to 1 
+            &kp Z       &kp X      &kp C       &kp V     &kp B          &td ESC N   &ht UNDER M  &ht SEMI COMMA  &ht COLON DOT  &ht BSLH FSLH
+                                               &td_s     &sk LCTRL      &sk LSHIF   &to 1 
             >;
         };
 
         right_layer {
             bindings = <
-            &kp N1     &kp N2     &kp N3      &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9      &ht ENTER N0
-            &kp DEL    &trans     &kp PSCRN   &kp INS   &trans       &kp LARW  &kp DARW  &kp  UARW   &kp RARW    &trans
-            &kp LALT   &kp LGUI   &kp LCTRL   &kp TAB   &to 3          &to 4    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END
-                                              &trans   &sk LSHIFT      &to 0      &to 2
+            &kp N1     &kp N2     &kp N3      &kp N4    &kp N5           &kp N6    &kp N7     &kp N8     &kp N9      &ht ENTER N0
+            &kp DEL    &trans     &kp PSCRN   &kp INS   &trans           &kp LARW  &kp DARW   &kp  UARW   &kp RARW    &trans
+            &kp LALT   &kp LGUI   &kp LCTRL   &kp TAB   &to 3            &to 4     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END
+                                              &trans    &trans           &to 0     &to 2
             >;
         };
 
@@ -89,15 +95,15 @@
             &kp DQT  &kp LBKT   &kp LBRC   &kp LPAR      &trans         &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON   &trans
         //│  '       │  ]       │  }       │  )       │          │   │    \     │  _       │  +       │  │       │   ?      │
             &kp SQT     &kp RBKT   &kp RBRC   &kp RPAR   &trans         &kp BSLH   &kp UNDER  &kp PLUS   &kp PIPE  &kp QMARK
-                                             &trans       &sk LGUI       &to 0    &to 3
+                                             &trans       &trans        &to 0    &to 4 
             >;
         };
 
         tri_layer {
             bindings = <
-            &kp F1     &kp F2     &kp F3     &kp F4     &bt BT_SEL 0     &bt BT_SEL 2 &bt BT_SEL 4  &to MOUSE  &kp C_MUTE  &kp C_NEXT
-            &kp F5     &kp F6     &kp F7     &kp F8     &bt BT_SEL 1     &bt BT_SEL 3 &bt BT_CLR   &kp C_BRI_UP   &kp C_VOL_UP  &kp C_PP
-            &kp F9     &kp F10    &kp F11    &kp F12      &bootloader     &bootloader  &trans      &kp C_BRI_DEC  &kp C_VOL_DN &kp C_PREV
+            &kp F1     &kp F2     &kp F3     &kp F4     &bt BT_SEL 0     &bt BT_SEL 2 &bt BT_SEL 4    &to MOUSE  &kp C_MUTE  &kp C_NEXT
+            &kp F5     &kp F6     &kp F7     &kp F8     &bt BT_SEL 1     &bt BT_SEL 3 &bt BT_CLR      &kp C_BRI_UP   &kp C_VOL_UP  &kp C_PP
+            &kp F9     &kp F10    &kp F11    &kp F12      &bootloader     &bootloader &bt BT_CLR_ALL  &kp C_BRI_DEC  &kp C_VOL_DN &kp C_PREV
                                                 &trans     &trans         &to 0     &trans
             >;
         };
