@@ -62,7 +62,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&sk RCTRL>, <&to 0>;
+            bindings = <&kp N>, <&kp ESC>;
         };
   };
 
@@ -73,7 +73,7 @@
             bindings = <
             &kp Q       &kp W      &kp E       &kp R     &kp T          &kp Y       &ht CAPS U   &ht MINUS I     &ht EQUAL O    &ht ENTER P
             &kp A       &kp S      &kp D       &kp F     &kp G          &kp H       &kp J        &kp K           &kp L          &kp BSPC
-            &kp Z       &kp X      &kp C       &kp V     &kp B          &td ESC N   &ht UNDER M  &ht SEMI COMMA  &ht COLON DOT  &ht BSLH FSLH
+            &kp Z       &kp X      &kp C       &kp V     &kp B          &td_esc     &ht UNDER M  &ht SEMI COMMA  &ht COLON DOT  &ht BSLH FSLH
                                                &td_s     &sk LCTRL      &sk LSHIF   &to 1 
             >;
         };
