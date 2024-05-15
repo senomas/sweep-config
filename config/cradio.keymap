@@ -56,7 +56,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <500>;
-            bindings = <&sk LSHIFT>, <&kp CAPS>;
+            bindings = <&sk LSHIFT>, <&kp TAB>;
         };
         td_esc: tap_dance_esc {
             compatible = "zmk,behavior-tap-dance";
@@ -77,7 +77,7 @@
 
         default_layer {
             bindings = <
-            &kp Q       &kp W      &kp E       &kp R     &kp T          &kp Y       &ht CAPS U   &ht MINUS I     &ht EQUAL O    &ht ENTER P
+            &kp Q       &kp W      &kp E       &kp R     &kp T          &ht ASTRK Y &ht PLUS U   &ht MINUS I     &ht EQUAL O    &ht ENTER P
             &kp A       &kp S      &kp D       &kp F     &kp G          &kp H       &kp J        &kp K           &kp L          &kp BSPC
             &kp Z       &kp X      &kp C       &kp V     &kp B          &td_esc_n   &ht UNDER M  &ht SEMI COMMA  &ht COLON DOT  &ht BSLH FSLH
                                           &ht LALT SPACE &td_shift      &td_esc     &to 1 
