@@ -52,16 +52,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        ht_shift: hold_tap_shift {
-            label = "hold_tap";
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&sk LSHIFT>, <&kp CAPS>;
-        };
         td_shift: tap_dance_shift {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
