@@ -74,10 +74,10 @@
 
         right_layer {  // 1
             bindings = <
-            &kp N1     &kp N2      &kp N3       &kp N4    &kp N5           &kp N6    &kp N7     &kp N8     &kp N9      &ht ENTER N0
-            &kp DEL    &trans      &ht PSCRN D  &kp INS   &trans           &kp LARW  &kp DARW   &kp UARW   &kp RARW    &trans
-            &kp LALT   &ht LGUI X  &kp LCTRL    &kp TAB   &to 3            &trans    &kp HOME   &kp PG_DN  &kp PG_UP   &kp END
-                                                &trans    &trans           &to 0     &to 2
+            &kp N1     &kp N2      &kp N3       &kp N4    &kp N5      &kp N6    &kp N7     &kp N8          &kp N9           &ht ENTER N0
+            &kp DEL    &trans      &ht PSCRN D  &kp INS   &trans      &kp LARW  &kp DARW   &kp UARW        &kp RARW         &trans
+            &kp LALT   &ht LGUI X  &kp LCTRL    &kp TAB   &to 3       &trans    &kp HOME   &ht SEMI PG_DN  &ht COLON PG_UP  &kp END
+                                                &trans    &trans      &to 0     &to 2
             >;
         };
 
