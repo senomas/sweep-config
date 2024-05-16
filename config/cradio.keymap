@@ -56,13 +56,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <500>;
-            bindings = <&sk LSHIFT>, <&kp TAB>;
-        };
-        td_esc_n: tap_dance_esc_n {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&kp N>, <&kp ESC>;
+            bindings = <&sk LSHIFT>, <&kp ESC>;
         };
   };
 
@@ -73,7 +67,7 @@
             bindings = <
             &kp Q       &kp W      &kp E       &kp R     &kp T          &ht ASTRK Y &ht PLUS U   &ht MINUS I     &ht EQUAL O    &ht ENTER P
             &kp A       &kp S      &kp D       &kp F     &kp G          &kp H       &kp J        &kp K           &kp L          &kp BSPC
-            &kp Z       &kp X      &kp C       &kp V     &kp B          &td_esc_n   &ht UNDER M  &ht SEMI COMMA  &ht COLON DOT  &ht BSLH FSLH
+            &kp Z       &kp X      &kp C       &kp V     &kp B          &ht TAB N   &ht UNDER M  &ht SEMI COMMA  &ht COLON DOT  &ht BSLH FSLH
                                           &ht LALT SPACE &td_shift      &sk LCTRL   &to 1 
             >;
         };
