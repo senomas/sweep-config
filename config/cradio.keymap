@@ -89,16 +89,16 @@
             &kp DQT  &kp LBKT   &kp LBRC   &kp LPAR      &trans         &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON   &trans
         //│  '       │  ]       │  }       │  )       │          │   │    \     │  _       │  +       │  │       │   ?      │
             &kp SQT     &kp RBKT   &kp RBRC   &kp RPAR   &trans         &trans     &kp UNDER  &kp PLUS   &kp PIPE  &kp QMARK
-                                             &trans      &trans         &to 0      &to 4 
+                                              &trans     &trans         &to 0      &to 4 
             >;
         };
 
         tri_layer {  // 3
             bindings = <
-            &kp F1     &kp F2     &kp F3     &kp F4     &bt BT_SEL 0     &bt BT_SEL 2 &bt BT_SEL 4    &to MOUSE  &kp C_MUTE  &kp C_NEXT
-            &kp F5     &kp F6     &kp F7     &kp F8     &bt BT_SEL 1     &bt BT_SEL 3 &bt BT_CLR      &kp C_BRI_UP   &kp C_VOL_UP  &kp C_PP
-            &kp F9     &kp F10    &kp F11    &kp F12    &bootloader      &trans       &bt BT_CLR_ALL  &kp C_BRI_DEC  &kp C_VOL_DN &kp C_PREV
-                                              &trans    &trans           &to 0        &trans
+            &bt BT_CLR      &kp F2     &kp F3     &kp F4     &bt BT_SEL 0     &bt BT_SEL 2 &bt BT_SEL 4    &to MOUSE      &kp C_MUTE  &kp C_NEXT
+            &bt BT_CLR_ALL  &kp F6     &kp F7     &kp F8     &bt BT_SEL 1     &bt BT_SEL 3 &trans          &kp C_BRI_UP   &kp C_VOL_UP  &kp C_PP
+            &kp F9          &kp F10    &kp F11    &kp F12    &bootloader      &trans       &trans          &kp C_BRI_DEC  &kp C_VOL_DN &kp C_PREV
+                                                  &trans     &trans           &to 0        &trans
             >;
         };
 
