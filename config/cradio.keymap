@@ -65,7 +65,7 @@
 
         default_layer {
             bindings = <
-            &kp Q       &kp W      &kp E       &kp R     &kp T          &ht LBRC Y     &ht RBRC U   &ht MINUS I     &ht EQUAL O    &ht ENTER P
+            &kp Q       &kp W      &kp E       &kp R     &kp T          &ht LBKT Y     &ht RBKT U   &ht MINUS I     &ht EQUAL O    &ht ENTER P
             &kp A       &kp S      &kp D       &kp F     &ht QMARK G    &kp H          &kp J        &kp K           &kp L          &kp BSPC
             &kp Z       &kp X      &kp C       &kp V     &kp B          &ht TAB N      &ht UNDER M  &ht SEMI COMMA  &ht COLON DOT  &ht BSLH FSLH
                                           &ht LALT SPACE &td_shift      &kp LCTRL      &to 1 
