@@ -5,7 +5,8 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #include "zmk-helpers/helper.h"
-#include "zmk-helpers/keypos_def/keypos_34keys.h"
+#include "zmk-helpers/key-labels/34.h"
+
 
 #define HRML(k2,k3,k4) &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3
