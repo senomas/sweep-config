@@ -1,12 +1,13 @@
 # This file specifies the build dependencies for Github Action workflows and
-# for local build environments. The workspace has four toplevel directories
-# containing the user config, modules, zephy and ZMK.
+# for local build environments. The workspace has three toplevel directories
+# containing the user config, user modules and ZMK. Zephyr and its dependencies
+# are namespaced under /zmk to keep the toplevel clean.
 #
 # ZMK-Workspace
 # ├── config
-# ├── modules
-# ├── zephyr
+# ├── modules (user modules)
 # └── zmk
+#     └── modules (Zephyr modules)
 #
 # To create a local build environment, clone this repository and then run the
 # following commands from its toplevel directory:
@@ -19,48 +20,32 @@
 manifest:
   defaults:
     remote: urob
-    revision: v0.3 # Pin everything to v0.3
 
   remotes:
+    - name: upstream
+      url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
 
   projects:
-    - name: zmk
-      remote: zmkfirmware
-      import: app/west.yml
-
-    # ZMK modules
-    - name: zmk-adaptive-key
-      path: modules/zmk/adaptive-key
-    - name: zmk-auto-layer
-      path: modules/zmk/auto-layer
     - name: zmk-helpers
-      path: modules/zmk/helpers
-    - name: zmk-leader-key
-      path: modules/zmk/leader-key
+      revision: main
+      path: modules/helpers
+    - name: zmk-auto-layer
+      revision: main
+      path: modules/auto-layer
     - name: zmk-tri-state
-      path: modules/zmk/tri-state
-    - name: zmk-unicode
-      path: modules/zmk/unicode
+      revision: main
+      path: modules/tri-state
 
-    # Temporarily overload Zephyr until
-    # https://github.com/zmkfirmware/zephyr/pull/40 is merged.
-    - name: zephyr
-      revision: v3.5.0+zmk-fixes
-      clone-depth: 1
+    # ZMK with Zephyr namespaced under /zmk. This requires that ZMK imports
+    # Zephyr with a path other than `zephyr` (as in `going-modular`).
+    - name: zmk
+      revision: going-modular
+      path: .
       import:
-        # Only enable most commonly used boards. For less common hardware one
-        # may need to enable additional modules.
-        name-allowlist:
-          - cmsis
-          - hal_nordic
-          - hal_rpi_pico
-          - hal_stm32
-          - lvgl
-          - tinycrypt
+        file: app/west.yml
+        path-prefix: zmk
 
   self:
     path: config
