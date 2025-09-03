@@ -17,8 +17,12 @@ ZMK_APP_PATH  ?= zmk/app
 ZMK_CONFIG    ?= $(WORKDIR)/config
 
 # Caches (speed up subsequent runs)
-WEST_CACHE    ?= $(HOME)/.west
-ZEPHYR_CACHE  ?= $(HOME)/.cache/zephyr
+WEST_CACHE    ?= .cache/.west
+ZEPHYR_CACHE  ?= .cache/zephyr
+
+PIP_CACHE   ?= .cache/pip
+PIPX_HOME   ?= .cache/pipx
+
 
 # Build directories (one per side)
 BUILD_DIR_L   ?= build/$(BOARD)-$(LEFT_SHIELD)
@@ -38,7 +42,12 @@ $(DOCKER) run --rm -t --network=host \
   -v "$(WEST_CACHE)":/root/.west \
   -v "$(ZEPHYR_CACHE)":/root/.cache/zephyr \
   -v "$(CMAKE_REG)":/root/.cmake \
+	-v "$(PIP_CACHE)":/root/.cache/pip \
+  -v "$(PIPX_HOME)":/root/.local/pipx \
   -w /work \
+  -e PIP_CACHE_DIR=/root/.cache/pip \
+  -e PIPX_HOME=/root/.local/pipx \
+  -e PIPX_BIN_DIR=/root/.local/bin \
   $(IMAGE) bash -lc '$(1)'
 endef
 
@@ -86,6 +95,7 @@ image:
 prepare:
 	$(call DOCKER_RUN, \
 		set -e ; \
+  	pipx install "west~=1.3" ; \
 		west init -l config || true ; \
 		west update ; \
 		west zephyr-export || true)
@@ -117,10 +127,12 @@ build-right:
 build-all: build-left build-right
 
 clean-left:
-	rm -rf "$(BUILD_DIR_L)"
+	sudo rm -rf "$(BUILD_DIR_L)"
 
 clean-right:
-	rm -rf "$(BUILD_DIR_R)"
+	sudo rm -rf "$(BUILD_DIR_R)"
 
 clean-all: clean-left clean-right
+	sudo rm -rf ${WEST_CACHE}
+	sudo rm -rf ${ZEPHYR_CACHE}
 

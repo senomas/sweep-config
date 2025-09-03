@@ -7,7 +7,6 @@
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/34.h"
 
-
 #define HRML(k2,k3,k4) &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3
 #define WHRML(k2,k3,k4) &ht LALT k2  &ht LGUI k3  &ht LCTRL k4
@@ -66,37 +65,40 @@
 
         default_layer {
             bindings = <
-            &kp Q          &kp W       &kp E       &kp R        &kp T             &ht LBKT Y     &ht RBKT U   &ht MINUS I      &ht EQUAL O    &ht ENTER P
-            &kp A          &kp S       &kp D       &kp F        &ht QMARK G       &kp H          &kp J        &kp K            &kp L          &kp BSPC
-            &ht LSHIFT Z   &ht LALT X  &ht LCTRL C &kp V        &kp B             &ht TAB N      &ht UNDER M  &ht RCTRL COMMA  &ht RALT DOT   &ht RSHIFT FSLH
-                                                   &lt LEF ESC  &lt RIG SPACE     &lt LEF BSPC   &lt RIG ENTER
+            &kp Q       &kp W      &kp E       &kp R     &kp T          &ht ASTRK Y &ht PLUS U   &ht MINUS I     &ht EQUAL O    &ht ENTER P
+            &kp A       &kp S      &kp D       &kp F     &kp G          &kp H       &kp J        &kp K           &kp L          &ht QMARK BSPC
+            &kp Z       &kp X      &kp C       &kp V     &kp B          &ht TAB N   &ht UNDER M  &ht SEMI COMMA  &ht COLON DOT  &ht BSLH FSLH
+                                          &ht LALT SPACE &td_shift      &sk LCTRL   &to 1 
             >;
         };
 
         right_layer {  // 1
             bindings = <
-            &kp N1         &kp N2      &kp N3       &kp N4      &kp N5            &kp N6         &kp N7       &kp N8          &kp N9           &kp N0
-            &kp DEL        &trans      &ht PSCRN D  &kp INS     &trans            &kp LARW       &kp DARW     &kp UARW        &kp RARW         &trans
-            &ht LSHIFT Z   &kp LGUI    &ht LCTRL C  &kp V       &kp B             &ht TAB N      &ht UNDER M  &ht RCTRL COMMA  &kp RGUI      &ht RSHIFT FSLH
-                                                    &lt TRI ESC &kp SPACE         &kt TRI BSPC   &kp ENTER
+            &kp N1     &kp N2      &kp N3       &kp N4    &kp N5      &kp N6    &kp N7     &kp N8          &kp N9           &ht ENTER N0
+            &kp DEL    &trans      &ht PSCRN D  &kp INS   &trans      &kp LARW  &kp DARW   &kp UARW        &kp RARW         &trans
+            &kp LALT   &ht LGUI X  &kp LCTRL    &kp TAB   &to 3       &trans    &kp HOME   &ht SEMI PG_DN  &ht COLON PG_UP  &kp END
+                                                &trans    &to 0       &trans    &to 2
             >;
         };
 
         left_layer {  // 2
             bindings = <
-            &kp EXCL       &kp AT      &kp HASH     &kp DLLR    &kp PRCNT         &kp CARET      &kp AMPS   &kp ASTRK  &kp GRAVE   &ht ENTER TILDE
-            &kp DQT        &kp LBKT    &kp LBRC     &kp LPAR    &trans            &kp FSLH       &kp MINUS  &kp EQUAL  &kp COLON   &trans
-            &kp SQT        &kp RBKT    &kp RBRC     &kp RPAR    &trans            &trans         &kp UNDER  &kp PLUS   &kp PIPE  &kp QMARK
-                                                    &kp ESC     &lt TRI SPACE         &kp BSPC   &lt TRI ENTER
+        //│  !       │  @       │  #       │  $       │  %       │   │  ^       │  &       │  *       │  `       │  ~       │
+            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp GRAVE   &ht ENTER TILDE
+        //│  "       │  [       │  {       │  (       │          │   │   /      │  -       │  =       │     :    │  ;       │
+            &kp DQT  &kp LBKT   &kp LBRC   &kp LPAR      &trans         &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON   &trans
+        //│  '       │  ]       │  }       │  )       │          │   │    \     │  _       │  +       │  │       │   ?      │
+            &kp SQT     &kp RBKT   &kp RBRC   &kp RPAR   &trans         &trans     &kp UNDER  &kp PLUS   &kp PIPE  &kp QMARK
+                                             &trans       &to 0         &trans     &to 4 
             >;
         };
 
         tri_layer {  // 3
             bindings = <
-            &bt BT_CLR      &kp F2     &kp F3      &kp F4       &bt BT_SEL 0      &bt BT_SEL 2   &bt BT_SEL 4    &to MOUSE      &kp C_MUTE  &kp C_NEXT
-            &bt BT_CLR_ALL  &kp F6     &kp F7      &kp F8       &bt BT_SEL 1      &bt BT_SEL 3   &trans          &kp C_BRI_UP   &kp C_VOL_UP  &kp C_PP
-            &kp F9          &kp F10    &kp F11     &kp F12      &bootloader       &trans         &trans          &kp C_BRI_DEC  &kp C_VOL_DN &kp C_PREV
-                                                   &kp ESC      &kp SPACE         &kp BSPC       &kp ENTER
+            &kp F1     &kp F2     &kp F3     &kp F4     &bt BT_SEL 0     &bt BT_SEL 2 &bt BT_SEL 4    &to MOUSE  &kp C_MUTE  &kp C_NEXT
+            &kp F5     &kp F6     &kp F7     &kp F8     &bt BT_SEL 1     &bt BT_SEL 3 &bt BT_CLR      &kp C_BRI_UP   &kp C_VOL_UP  &kp C_PP
+            &kp F9     &kp F10    &kp F11    &kp F12    &bootloader      &trans       &bt BT_CLR_ALL  &kp C_BRI_DEC  &kp C_VOL_DN &kp C_PREV
+                                              &trans    &to 0            &trans       &trans
             >;
         };
 

@@ -7,3 +7,4 @@ zephyr
 zmk
 draw/base.yaml
 build
+.cache
