@@ -57,7 +57,7 @@ PREP = set -e ; \
 	pipx runpip west install -r zephyr/scripts/requirements.txt ; \
 	west zephyr-export || true
 
-.PHONY: help image prepare build-left build-right build-all clean-left clean-right clean-all shell doctor
+.PHONY: help image prepare build-left build-right build-all clean-left clean-right clean-all FORCE
 
 help:
 	@echo "Targets:"
@@ -92,7 +92,7 @@ image:
 	docker build --network=host -t $(IMAGE) .
 
 # Initialize/update the west workspace
-prepare:
+prepare: FORCE
 	$(call DOCKER_RUN, \
 		set -e ; \
   	pipx install "west~=1.3" ; \
@@ -100,7 +100,7 @@ prepare:
 		west update ; \
 		west zephyr-export || true)
 
-build-left:
+build-left: FORCE
 	$(call DOCKER_RUN, \
 		$(PREP) ; \
 		mkdir -p "$(BUILD_DIR_L)" ; \
@@ -110,9 +110,12 @@ build-left:
 		echo ; echo "Artifacts:" ; \
 		ls -lh "$(BUILD_DIR_L)/zephyr/" | sed -n "s@^@  @p" ; \
 		echo "UF2:  $(BUILD_DIR_L)/zephyr/zmk.uf2" ; \
-		echo "HEX:  $(BUILD_DIR_L)/zephyr/zmk.hex" )
+		echo "HEX:  $(BUILD_DIR_L)/zephyr/zmk.hex" ; \
+		chown -R 1000:1000 $(BUILD_DIR_L)/zephyr/ )
+	cp $(BUILD_DIR_L)/zephyr/zmk.uf2 ${BOARD}-left.uf2
 
-build-right:
+
+build-right: FORCE
 	$(call DOCKER_RUN, \
 		$(PREP) ; \
 		mkdir -p "$(BUILD_DIR_R)" ; \
@@ -122,7 +125,9 @@ build-right:
 		echo ; echo "Artifacts:" ; \
 		ls -lh "$(BUILD_DIR_R)/zephyr/" | sed -n "s@^@  @p" ; \
 		echo "UF2:  $(BUILD_DIR_R)/zephyr/zmk.uf2" ; \
-		echo "HEX:  $(BUILD_DIR_R)/zephyr/zmk.hex" )
+		echo "HEX:  $(BUILD_DIR_R)/zephyr/zmk.hex" ; \
+		chown -R 1000:1000 $(BUILD_DIR_R)/zephyr/ )
+	cp $(BUILD_DIR_R)/zephyr/zmk.uf2 ${BOARD}-right.uf2
 
 build-all: build-left build-right
 

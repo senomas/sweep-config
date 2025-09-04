@@ -8,3 +8,4 @@ zmk
 draw/base.yaml
 build
 .cache
+*.uf2
