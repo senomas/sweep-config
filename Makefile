@@ -129,7 +129,10 @@ build-right: FORCE
 		chown -R 1000:1000 $(BUILD_DIR_R)/zephyr/ )
 	cp $(BUILD_DIR_R)/zephyr/zmk.uf2 ${BOARD}-right.uf2
 
-build-all: build-left build-right
+build-all: FORCE
+	rm -rf *.uf2
+	$(MAKE) build-left
+	$(MAKE) build-right
 
 clean-left:
 	sudo rm -rf "$(BUILD_DIR_L)"
